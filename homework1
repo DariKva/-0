@@ -1,0 +1,21 @@
+massiv = [0]
+for num in range(44):
+    if massiv[num] % 2 == 0:
+        massiv.append(massiv[num] + 21)
+    else:
+        massiv.append(massiv[num] - 1)
+
+
+def proverka(arg):
+    sum = 0
+    for i in range(1, arg + 1):
+        if arg % i == 0:
+            sum += 1
+    return sum
+
+
+otvet = []
+for num in massiv:
+    if proverka(num) == 2:
+        otvet.append(num)
+print(otvet)
